@@ -35,33 +35,111 @@ public class GroupBy {
 
 	public static class Map extends Mapper<LongWritable, Text, Text, DoubleWritable> {
 
-		@Override
-		public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+//		@Override
+//		public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+//            if (key.toString().equals("0")) {
+//                return;
+//            }
+//
+//            String line = value.toString();
+//
+//            String[] words = line.split(",");
+//            String customer_id = words[5];
+//            String profit = words[20];
+//
+//            context.write(new Text(customer_id), new DoubleWritable(Double.parseDouble(profit)));
+//		}
+
+//		@Override
+//        public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+//            if (key.toString().equals("0")) {
+//                return;
+//            }
+//
+//            String line = value.toString();
+//
+//            String[] words = line.split(",");
+//            String state = words[10];
+//            String date = words[2];
+//            String sale = words[17];
+//
+//            String statedate = state + "-" + date;
+//
+//            double fdouble;
+//
+//            try {
+//                fdouble = Double.parseDouble(sale);
+//                context.write(new Text(statedate), new DoubleWritable(fdouble));
+//            } catch (NumberFormatException e) {}
+//        }
+
+//        @Override
+//        public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+//            if (key.toString().equals("0")) {
+//                return;
+//            }
+//
+//            String line = value.toString();
+//
+//            String[] words = line.split(",");
+//            String cat = words[14];
+//            String date = words[2];
+//            String sale = words[17];
+//
+//            String catdate = cat + "-" + date;
+//            Double fdouble;
+//
+//            try {
+//                fdouble = Double.parseDouble(sale);
+//                context.write(new Text(catdate), new DoubleWritable(fdouble));
+//            } catch (NumberFormatException e) {}
+//        }
+
+        @Override
+        public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
             if (key.toString().equals("0")) {
                 return;
             }
 
             String line = value.toString();
-
             String[] words = line.split(",");
-            String customer_id = words[5];
-            String profit = words[20];
+            String orderId = words[1];
+            String quantity = words[18];
 
-            context.write(new Text(customer_id), new DoubleWritable(Double.parseDouble(profit)));
-		}
+            double quantityDouble = Double.parseDouble(quantity);
+
+            try {
+                context.write(new Text(orderId), new DoubleWritable(quantityDouble));
+            } catch (NumberFormatException e) {}
+        }
+
 	}
 
 	public static class Reduce extends Reducer<Text, DoubleWritable, Text, DoubleWritable> {
+//		@Override
+//		public void reduce(Text key, Iterable<DoubleWritable> values, Context context) throws IOException, InterruptedException {
+//            double sum = 0.;
+//
+//            for (DoubleWritable val : values)
+//                sum += val.get();
+//
+//            context.write(key, new DoubleWritable(sum));
+//		}
 
-		@Override
-		public void reduce(Text key, Iterable<DoubleWritable> values, Context context) throws IOException, InterruptedException {
+        @Override
+        public void reduce(Text key, Iterable<DoubleWritable> values, Context context) throws IOException, InterruptedException {
             double sum = 0.;
+            double quantity = 0.f;
 
-            for (DoubleWritable val : values)
-                sum += val.get();
+            for (DoubleWritable val : values) {
+                sum++;
+                quantity += val.get();
+            }
 
-            context.write(key, new DoubleWritable(sum));
-		}
+            String res = key.toString() + "   " +  sum;
+
+            context.write(new Text(res), new DoubleWritable(quantity));
+        }
 	}
 
 	public static void main(String[] args) throws Exception {
