@@ -1,0 +1,6 @@
+ID_LOCALISATION,VILLE,CODE_VILLE,DEPARTEMENT_PROVINCE,PAYS,CONTINENT,FUSEAU_HORRAIRE,CODE_AZ,NOM_AZ
+1,Ville1,V1,Province1,Pays1,Continent1,GMT,us-east-1a,Zone1
+2,Ville2,V2,Province2,Pays2,Continent2,GMT,us-east-1a,Zone2
+3,Ville3,V3,Province3,Pays3,Continent3,GMT,us-east-1a,Zone3
+4,Ville4,V4,Province4,Pays4,Continent4,GMT,us-east-1a,Zone4
+5,Ville5,V5,Province5,Pays5,Continent5,GMT,us-east-1a,Zone5

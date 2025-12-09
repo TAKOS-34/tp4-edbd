@@ -1,0 +1,11 @@
+ID_SERVICE,CODE_SERVICE,NOM_SERVICE,CATEGORIE,FAMILLE_SERVICE,STATUT_SERVICE
+1,SVC1,AWS Service 1,Compute,EC2,Active
+2,SVC2,AWS Service 2,Compute,EC2,Active
+3,SVC3,AWS Service 3,Compute,EC2,Active
+4,SVC4,AWS Service 4,Compute,EC2,Active
+5,SVC5,AWS Service 5,Compute,EC2,Active
+6,SVC6,AWS Service 6,Compute,EC2,Active
+7,SVC7,AWS Service 7,Compute,EC2,Active
+8,SVC8,AWS Service 8,Compute,EC2,Active
+9,SVC9,AWS Service 9,Compute,EC2,Active
+10,SVC10,AWS Service 10,Compute,EC2,Active

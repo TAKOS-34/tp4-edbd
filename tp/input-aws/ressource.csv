@@ -1,0 +1,11 @@
+ID_RESSOURCE,NOM_RESSOURCE,TYPE_RESSOURCE,STATUT_RESSOURCE,DT_MISE_EN_ROUTE,DT_DERNIERE_MAINTENANCE,DT_FIN_SERVICE,IP,OS,DATA_CENTER
+1,SRV-1,Virtual Machine,Running,2025-08-30 13:57:15,,,192.168.1.1,Linux,DC1
+2,SRV-2,Virtual Machine,Running,2025-08-30 13:57:15,,,192.168.1.2,Linux,DC2
+3,SRV-3,Virtual Machine,Running,2025-08-30 13:57:15,,,192.168.1.3,Linux,DC3
+4,SRV-4,Virtual Machine,Running,2025-08-30 13:57:15,,,192.168.1.4,Linux,DC4
+5,SRV-5,Virtual Machine,Running,2025-08-30 13:57:15,,,192.168.1.5,Linux,DC5
+6,SRV-6,Virtual Machine,Running,2025-08-30 13:57:15,,,192.168.1.6,Linux,DC6
+7,SRV-7,Virtual Machine,Running,2025-08-30 13:57:15,,,192.168.1.7,Linux,DC7
+8,SRV-8,Virtual Machine,Running,2025-08-30 13:57:15,,,192.168.1.8,Linux,DC8
+9,SRV-9,Virtual Machine,Running,2025-08-30 13:57:15,,,192.168.1.9,Linux,DC9
+10,SRV-10,Virtual Machine,Running,2025-08-30 13:57:15,,,192.168.1.10,Linux,DC10

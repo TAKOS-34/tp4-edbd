@@ -1,0 +1,101 @@
+ID_DATE,DATE_COMPLETE,NUMERO_JOUR,JOUR,NUMERO_MOIS,MOIS,TRIMESTRE,ANNEE,JOUR_SEMAINE,EST_WEEKEND,JOUR_FERIE,NUMERO_SEMAINE_ANNEE
+1,2025-12-07 13:57:15,7,Dimanche,12,Decembre ,1,2023,Lundi,N,N,10
+2,2025-12-06 13:57:15,6,Samedi  ,12,Decembre ,1,2023,Lundi,N,N,10
+3,2025-12-05 13:57:15,5,Vendredi,12,Decembre ,1,2023,Lundi,N,N,10
+4,2025-12-04 13:57:15,4,Jeudi   ,12,Decembre ,1,2023,Lundi,N,N,10
+5,2025-12-03 13:57:15,3,Mercredi,12,Decembre ,1,2023,Lundi,N,N,10
+6,2025-12-02 13:57:15,2,Mardi   ,12,Decembre ,1,2023,Lundi,N,N,10
+7,2025-12-01 13:57:15,1,Lundi   ,12,Decembre ,1,2023,Lundi,N,N,10
+8,2025-11-30 13:57:15,30,Dimanche,11,Novembre ,1,2023,Lundi,N,N,10
+9,2025-11-29 13:57:15,29,Samedi  ,11,Novembre ,1,2023,Lundi,N,N,10
+10,2025-11-28 13:57:15,28,Vendredi,11,Novembre ,1,2023,Lundi,N,N,10
+11,2025-11-27 13:57:15,27,Jeudi   ,11,Novembre ,1,2023,Lundi,N,N,10
+12,2025-11-26 13:57:15,26,Mercredi,11,Novembre ,1,2023,Lundi,N,N,10
+13,2025-11-25 13:57:15,25,Mardi   ,11,Novembre ,1,2023,Lundi,N,N,10
+14,2025-11-24 13:57:15,24,Lundi   ,11,Novembre ,1,2023,Lundi,N,N,10
+15,2025-11-23 13:57:15,23,Dimanche,11,Novembre ,1,2023,Lundi,N,N,10
+16,2025-11-22 13:57:15,22,Samedi  ,11,Novembre ,1,2023,Lundi,N,N,10
+17,2025-11-21 13:57:15,21,Vendredi,11,Novembre ,1,2023,Lundi,N,N,10
+18,2025-11-20 13:57:15,20,Jeudi   ,11,Novembre ,1,2023,Lundi,N,N,10
+19,2025-11-19 13:57:15,19,Mercredi,11,Novembre ,1,2023,Lundi,N,N,10
+20,2025-11-18 13:57:15,18,Mardi   ,11,Novembre ,1,2023,Lundi,N,N,10
+21,2025-11-17 13:57:15,17,Lundi   ,11,Novembre ,1,2023,Lundi,N,N,10
+22,2025-11-16 13:57:15,16,Dimanche,11,Novembre ,1,2023,Lundi,N,N,10
+23,2025-11-15 13:57:15,15,Samedi  ,11,Novembre ,1,2023,Lundi,N,N,10
+24,2025-11-14 13:57:15,14,Vendredi,11,Novembre ,1,2023,Lundi,N,N,10
+25,2025-11-13 13:57:15,13,Jeudi   ,11,Novembre ,1,2023,Lundi,N,N,10
+26,2025-11-12 13:57:15,12,Mercredi,11,Novembre ,1,2023,Lundi,N,N,10
+27,2025-11-11 13:57:15,11,Mardi   ,11,Novembre ,1,2023,Lundi,N,N,10
+28,2025-11-10 13:57:15,10,Lundi   ,11,Novembre ,1,2023,Lundi,N,N,10
+29,2025-11-09 13:57:15,9,Dimanche,11,Novembre ,1,2023,Lundi,N,N,10
+30,2025-11-08 13:57:15,8,Samedi  ,11,Novembre ,1,2023,Lundi,N,N,10
+31,2025-11-07 13:57:15,7,Vendredi,11,Novembre ,1,2023,Lundi,N,N,10
+32,2025-11-06 13:57:15,6,Jeudi   ,11,Novembre ,1,2023,Lundi,N,N,10
+33,2025-11-05 13:57:15,5,Mercredi,11,Novembre ,1,2023,Lundi,N,N,10
+34,2025-11-04 13:57:15,4,Mardi   ,11,Novembre ,1,2023,Lundi,N,N,10
+35,2025-11-03 13:57:15,3,Lundi   ,11,Novembre ,1,2023,Lundi,N,N,10
+36,2025-11-02 13:57:15,2,Dimanche,11,Novembre ,1,2023,Lundi,N,N,10
+37,2025-11-01 13:57:15,1,Samedi  ,11,Novembre ,1,2023,Lundi,N,N,10
+38,2025-10-31 13:57:15,31,Vendredi,10,Octobre  ,1,2023,Lundi,N,N,10
+39,2025-10-30 13:57:15,30,Jeudi   ,10,Octobre  ,1,2023,Lundi,N,N,10
+40,2025-10-29 13:57:15,29,Mercredi,10,Octobre  ,1,2023,Lundi,N,N,10
+41,2025-10-28 13:57:15,28,Mardi   ,10,Octobre  ,1,2023,Lundi,N,N,10
+42,2025-10-27 13:57:15,27,Lundi   ,10,Octobre  ,1,2023,Lundi,N,N,10
+43,2025-10-26 13:57:15,26,Dimanche,10,Octobre  ,1,2023,Lundi,N,N,10
+44,2025-10-25 13:57:15,25,Samedi  ,10,Octobre  ,1,2023,Lundi,N,N,10
+45,2025-10-24 13:57:15,24,Vendredi,10,Octobre  ,1,2023,Lundi,N,N,10
+46,2025-10-23 13:57:15,23,Jeudi   ,10,Octobre  ,1,2023,Lundi,N,N,10
+47,2025-10-22 13:57:15,22,Mercredi,10,Octobre  ,1,2023,Lundi,N,N,10
+48,2025-10-21 13:57:15,21,Mardi   ,10,Octobre  ,1,2023,Lundi,N,N,10
+49,2025-10-20 13:57:15,20,Lundi   ,10,Octobre  ,1,2023,Lundi,N,N,10
+50,2025-10-19 13:57:15,19,Dimanche,10,Octobre  ,1,2023,Lundi,N,N,10
+51,2025-10-18 13:57:15,18,Samedi  ,10,Octobre  ,1,2023,Lundi,N,N,10
+52,2025-10-17 13:57:15,17,Vendredi,10,Octobre  ,1,2023,Lundi,N,N,10
+53,2025-10-16 13:57:15,16,Jeudi   ,10,Octobre  ,1,2023,Lundi,N,N,10
+54,2025-10-15 13:57:15,15,Mercredi,10,Octobre  ,1,2023,Lundi,N,N,10
+55,2025-10-14 13:57:15,14,Mardi   ,10,Octobre  ,1,2023,Lundi,N,N,10
+56,2025-10-13 13:57:15,13,Lundi   ,10,Octobre  ,1,2023,Lundi,N,N,10
+57,2025-10-12 13:57:15,12,Dimanche,10,Octobre  ,1,2023,Lundi,N,N,10
+58,2025-10-11 13:57:15,11,Samedi  ,10,Octobre  ,1,2023,Lundi,N,N,10
+59,2025-10-10 13:57:15,10,Vendredi,10,Octobre  ,1,2023,Lundi,N,N,10
+60,2025-10-09 13:57:15,9,Jeudi   ,10,Octobre  ,1,2023,Lundi,N,N,10
+61,2025-10-08 13:57:15,8,Mercredi,10,Octobre  ,1,2023,Lundi,N,N,10
+62,2025-10-07 13:57:15,7,Mardi   ,10,Octobre  ,1,2023,Lundi,N,N,10
+63,2025-10-06 13:57:15,6,Lundi   ,10,Octobre  ,1,2023,Lundi,N,N,10
+64,2025-10-05 13:57:15,5,Dimanche,10,Octobre  ,1,2023,Lundi,N,N,10
+65,2025-10-04 13:57:15,4,Samedi  ,10,Octobre  ,1,2023,Lundi,N,N,10
+66,2025-10-03 13:57:15,3,Vendredi,10,Octobre  ,1,2023,Lundi,N,N,10
+67,2025-10-02 13:57:15,2,Jeudi   ,10,Octobre  ,1,2023,Lundi,N,N,10
+68,2025-10-01 13:57:15,1,Mercredi,10,Octobre  ,1,2023,Lundi,N,N,10
+69,2025-09-30 13:57:15,30,Mardi   ,9,Septembre,1,2023,Lundi,N,N,10
+70,2025-09-29 13:57:15,29,Lundi   ,9,Septembre,1,2023,Lundi,N,N,10
+71,2025-09-28 13:57:15,28,Dimanche,9,Septembre,1,2023,Lundi,N,N,10
+72,2025-09-27 13:57:15,27,Samedi  ,9,Septembre,1,2023,Lundi,N,N,10
+73,2025-09-26 13:57:15,26,Vendredi,9,Septembre,1,2023,Lundi,N,N,10
+74,2025-09-25 13:57:15,25,Jeudi   ,9,Septembre,1,2023,Lundi,N,N,10
+75,2025-09-24 13:57:15,24,Mercredi,9,Septembre,1,2023,Lundi,N,N,10
+76,2025-09-23 13:57:15,23,Mardi   ,9,Septembre,1,2023,Lundi,N,N,10
+77,2025-09-22 13:57:15,22,Lundi   ,9,Septembre,1,2023,Lundi,N,N,10
+78,2025-09-21 13:57:15,21,Dimanche,9,Septembre,1,2023,Lundi,N,N,10
+79,2025-09-20 13:57:15,20,Samedi  ,9,Septembre,1,2023,Lundi,N,N,10
+80,2025-09-19 13:57:15,19,Vendredi,9,Septembre,1,2023,Lundi,N,N,10
+81,2025-09-18 13:57:15,18,Jeudi   ,9,Septembre,1,2023,Lundi,N,N,10
+82,2025-09-17 13:57:15,17,Mercredi,9,Septembre,1,2023,Lundi,N,N,10
+83,2025-09-16 13:57:15,16,Mardi   ,9,Septembre,1,2023,Lundi,N,N,10
+84,2025-09-15 13:57:15,15,Lundi   ,9,Septembre,1,2023,Lundi,N,N,10
+85,2025-09-14 13:57:15,14,Dimanche,9,Septembre,1,2023,Lundi,N,N,10
+86,2025-09-13 13:57:15,13,Samedi  ,9,Septembre,1,2023,Lundi,N,N,10
+87,2025-09-12 13:57:15,12,Vendredi,9,Septembre,1,2023,Lundi,N,N,10
+88,2025-09-11 13:57:15,11,Jeudi   ,9,Septembre,1,2023,Lundi,N,N,10
+89,2025-09-10 13:57:15,10,Mercredi,9,Septembre,1,2023,Lundi,N,N,10
+90,2025-09-09 13:57:15,9,Mardi   ,9,Septembre,1,2023,Lundi,N,N,10
+91,2025-09-08 13:57:15,8,Lundi   ,9,Septembre,1,2023,Lundi,N,N,10
+92,2025-09-07 13:57:15,7,Dimanche,9,Septembre,1,2023,Lundi,N,N,10
+93,2025-09-06 13:57:15,6,Samedi  ,9,Septembre,1,2023,Lundi,N,N,10
+94,2025-09-05 13:57:15,5,Vendredi,9,Septembre,1,2023,Lundi,N,N,10
+95,2025-09-04 13:57:15,4,Jeudi   ,9,Septembre,1,2023,Lundi,N,N,10
+96,2025-09-03 13:57:15,3,Mercredi,9,Septembre,1,2023,Lundi,N,N,10
+97,2025-09-02 13:57:15,2,Mardi   ,9,Septembre,1,2023,Lundi,N,N,10
+98,2025-09-01 13:57:15,1,Lundi   ,9,Septembre,1,2023,Lundi,N,N,10
+99,2025-08-31 13:57:15,31,Dimanche,8,Aout     ,1,2023,Lundi,N,N,10
+100,2025-08-30 13:57:15,30,Samedi  ,8,Aout     ,1,2023,Lundi,N,N,10

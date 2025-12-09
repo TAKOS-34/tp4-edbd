@@ -70,7 +70,9 @@ public class GroupBy {
 //            try {
 //                fdouble = Double.parseDouble(sale);
 //                context.write(new Text(statedate), new DoubleWritable(fdouble));
-//            } catch (NumberFormatException e) {}
+//            } catch (NumberFormatException e) {
+//            	LOG.warning(e.getMessage());
+//            }
 //        }
 
 //        @Override
@@ -92,7 +94,9 @@ public class GroupBy {
 //            try {
 //                fdouble = Double.parseDouble(sale);
 //                context.write(new Text(catdate), new DoubleWritable(fdouble));
-//            } catch (NumberFormatException e) {}
+//            } catch (NumberFormatException e) {
+//				LOG.warning(e.getMessage());
+//            }
 //        }
 
         @Override
@@ -106,13 +110,15 @@ public class GroupBy {
             String orderId = words[1];
             String quantity = words[18];
 
-            double quantityDouble = Double.parseDouble(quantity);
+            double quantityDouble;
 
             try {
+				quantityDouble = Double.parseDouble(quantity);
                 context.write(new Text(orderId), new DoubleWritable(quantityDouble));
-            } catch (NumberFormatException e) {}
+            } catch (NumberFormatException e) {
+				LOG.warning(e.getMessage());
+			}
         }
-
 	}
 
 	public static class Reduce extends Reducer<Text, DoubleWritable, Text, DoubleWritable> {
