@@ -2,6 +2,7 @@ package partie2;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.DoubleWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
@@ -128,8 +129,34 @@ public class Datamart2Requete2 {
                 }
             }
 
-            if ( sum != 0) {
+            if (sum != 0) {
                 context.write(new Text(key), new Text(String.valueOf(sum)));
+            }
+        }
+    }
+
+    public static class MapSort extends Mapper<LongWritable, Text, DoubleWritable, Text> {
+        @Override
+        public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+            String line = value.toString();
+            String[] parts = line.split("\t");
+
+            if (parts.length >= 2) {
+                String nomService = parts[0];
+                try {
+                    double number = Double.parseDouble(parts[1]);
+                    context.write(new DoubleWritable(-number), new Text(nomService));
+                } catch (NumberFormatException ignored) {}
+            }
+        }
+    }
+
+    public static class ReduceSort extends Reducer<DoubleWritable, Text, Text, DoubleWritable> {
+        @Override
+        public void reduce(DoubleWritable key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
+            double number = -key.get();
+            for (Text service : values) {
+                context.write(service, new DoubleWritable(number));
             }
         }
     }
@@ -138,17 +165,18 @@ public class Datamart2Requete2 {
         Configuration conf = new Configuration();
         FileSystem fs = FileSystem.get(conf);
 
-        Path tempPath = new Path(OUTPUT_PATH + "/temp");
+        Path temp1Path = new Path(OUTPUT_PATH + "/temp1");
+        Path temp2Path = new Path(OUTPUT_PATH + "/temp2");
         Path finalPath = new Path(OUTPUT_PATH + Instant.now().getEpochSecond());
 
-        Job job1 = new Job(conf, "Datamart1Requete2_1");
+        Job job1 = new Job(conf, "Datamart2Requete2_1");
         job1.setJarByClass(Datamart2Requete2.class);
 
         job1.setOutputKeyClass(Text.class);
         job1.setOutputValueClass(Text.class);
 
-        job1.setMapperClass(Datamart2Requete2.Map.class);
-        job1.setReducerClass(Datamart2Requete2.Reduce.class);
+        job1.setMapperClass(Map.class);
+        job1.setReducerClass(Reduce.class);
 
         job1.setInputFormatClass(TextInputFormat.class);
         job1.setOutputFormatClass(TextOutputFormat.class);
@@ -157,28 +185,56 @@ public class Datamart2Requete2 {
         Path input2 = new Path(INPUT_PATH_ORDERS);
         FileInputFormat.setInputPaths(job1, input, input2);
 
-        FileOutputFormat.setOutputPath(job1, tempPath);
+        FileOutputFormat.setOutputPath(job1, temp1Path);
 
         if (job1.waitForCompletion(true)) {
-            Job job2 = new Job(conf, "Datamart1Requete2_2");
+            Job job2 = new Job(conf, "Datamart2Requete2_2");
             job2.setJarByClass(Datamart2Requete2.class);
 
             job2.setOutputKeyClass(Text.class);
             job2.setOutputValueClass(Text.class);
 
-            job2.setMapperClass(Datamart2Requete2.Map2.class);
-            job2.setReducerClass(Datamart2Requete2.Reduce2.class);
+            job2.setMapperClass(Map2.class);
+            job2.setReducerClass(Reduce2.class);
 
             job2.setInputFormatClass(TextInputFormat.class);
             job2.setOutputFormatClass(TextOutputFormat.class);
 
-            FileInputFormat.setInputPaths(job2, tempPath);
-            FileOutputFormat.setOutputPath(job2, finalPath);
+            FileInputFormat.setInputPaths(job2, temp1Path);
+            FileOutputFormat.setOutputPath(job2, temp2Path);
 
             job2.waitForCompletion(true);
 
-            if (fs.exists(tempPath)) {
-                fs.delete(tempPath, true);
+            if (job2.waitForCompletion(true)) {
+                Job job3 = new Job(conf, "Datamart2Requete2_3");
+                job3.setJarByClass(Datamart2Requete2.class);
+
+                job3.setMapperClass(MapSort.class);
+                job3.setReducerClass(ReduceSort.class);
+
+                job3.setMapOutputKeyClass(DoubleWritable.class);
+                job3.setMapOutputValueClass(Text.class);
+
+                job3.setOutputKeyClass(Text.class);
+                job3.setOutputValueClass(DoubleWritable.class);
+
+                job3.setNumReduceTasks(1);
+
+                job3.setInputFormatClass(TextInputFormat.class);
+                job3.setOutputFormatClass(TextOutputFormat.class);
+
+                FileInputFormat.setInputPaths(job3, temp2Path);
+                FileOutputFormat.setOutputPath(job3, finalPath);
+
+                job3.waitForCompletion(true);
+
+                if (fs.exists(temp1Path)) {
+                    fs.delete(temp1Path, true);
+                }
+
+                if (fs.exists(temp2Path)) {
+                    fs.delete(temp2Path, true);
+                }
             }
         }
     }
