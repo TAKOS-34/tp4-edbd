@@ -51,9 +51,7 @@ public class Datamart1Requete2 {
     public static class Map extends Mapper<LongWritable, Text, Text, Text> {
         @Override
         public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-            if (key.toString().equals("0")) {
-                return;
-            }
+            if (key.toString().equals("0")) return;
 
             FileSplit fileSplit = (FileSplit) context.getInputSplit();
             String filename = fileSplit.getPath().getName();
@@ -208,7 +206,7 @@ public class Datamart1Requete2 {
 
             if (job2.waitForCompletion(true)) {
                 Job job3 = new Job(conf, "Datamart1Requete2_3");
-                job3.setJarByClass(Datamart1Requete3.class);
+                job3.setJarByClass(Datamart1Requete2.class);
 
                 job3.setMapperClass(MapSort.class);
                 job3.setReducerClass(ReduceSort.class);

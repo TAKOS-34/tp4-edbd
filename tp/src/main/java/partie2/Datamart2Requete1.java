@@ -50,9 +50,7 @@ public class Datamart2Requete1 {
     public static class Map extends Mapper<LongWritable, Text, Text, Text> {
         @Override
         public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-            if (key.toString().equals("0")) {
-                return;
-            }
+            if (key.toString().equals("0")) return;
 
             FileSplit fileSplit = (FileSplit) context.getInputSplit();
             String filename = fileSplit.getPath().getName();
