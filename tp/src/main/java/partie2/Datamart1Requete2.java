@@ -210,8 +210,8 @@ public class Datamart1Requete2 {
                 Job job3 = new Job(conf, "Datamart1Requete2_3");
                 job3.setJarByClass(Datamart1Requete3.class);
 
-                job3.setMapperClass(Datamart1Requete3.MapSort.class);
-                job3.setReducerClass(Datamart1Requete3.ReduceSort.class);
+                job3.setMapperClass(MapSort.class);
+                job3.setReducerClass(ReduceSort.class);
 
                 job3.setMapOutputKeyClass(DoubleWritable.class);
                 job3.setMapOutputValueClass(Text.class);
